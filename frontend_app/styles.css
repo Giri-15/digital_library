@@ -1,0 +1,197 @@
+/* Custom CSS for page layout and animations */
+body {
+    background-color: #F9F9F9; 
+    color: #333333; 
+    font-family: 'Roboto', sans-serif;  
+}
+
+/* Google Fonts import for professional font styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Merriweather:wght@300;400&family=Lora:wght@400;500&display=swap');
+
+/* Typewriter animation for the quote */
+@keyframes typewriter {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Quote font style */
+.quote {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2px;
+    font-weight: Bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;  /* Light gray for quotes */
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: 0;  /* Start with no width */
+    animation: typewriter 4s steps(50) 1s normal both;
+}
+
+/* Body font style */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Bounce animation for the title */
+@keyframes bounce {
+    0%, 50% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Bounce animation applied to class */
+.bounce {
+    animation: bounce 1s ease-in-out infinite;
+    font-size: 24px !important; /* Ensuring the font size is applied using !important */
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Add space at the top */
+}
+
+/* Title fade-in effect */
+.fade-in {
+    animation: fadeIn 5s ease-out;
+    text-align: center; /* Center the text */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Book Description */
+.book-description {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Book title styling */
+.book-title {
+    text-align: left;
+    font-size: 14px;
+    color :crimson;
+    font-weight: bold;
+    min-height: 40px; /* Ensure uniform height for all book titles */
+    line-height: 1.2; /* Adjust line spacing */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+
+/* Add space between book rows */
+.book-row {
+    margin-bottom: 40px; /* Adjust space between rows */
+}
+
+/* Add space between title and first row */
+.first-row-spacing {
+    margin-top: 80px; /* Adjust space between title and first row */
+}
+
+
+/* Hide Streamlit Default Elements */
+#MainMenu, footer {
+    visibility: hidden;
+}
+
+/* Hide the default Streamlit sidebar */
+[data-testid="stSidebarNav"] {
+    display: none;
+}
+
+/* Background Image */
+.stApp {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Sidebar Styling */
+.stSidebar {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+}
+
+/* Buttons */
+button {
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: skyblue;
+}
+
+/* Navigation Header */
+h1 {
+    font-size: 24px;
+    color: darkblue;
+}
+
+/* Book Viewer Main Container */
+.book-viewer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* First Row: Split into 60-40 */
+.row-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Left Section (Title, Image, Tabs) - 60% */
+.left-section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Right Section (Book Metadata) - 40% */
+.right-section {
+    width: 40%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;  /* Ensure proper alignment */
+}
+
+/* Media Container */
+.media-container {
+    width: 100%;
+    padding-top: 20px;
+}
+
+/* Book Description */
+.book-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+
