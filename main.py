@@ -1,31 +1,10 @@
 import streamlit as st
-import base64
 from pages.home import home
 from pages.add_book import add_book_page
 from pages.book_viewer import book_viewer
 from pages.login import login, logout
-from frontend_app.load_styles import load_css
+from frontend_app.load_styles import load_css , set_background
 
-
-def set_background():
-    """Set background image with opacity 0.7"""
-    try:
-        bg_image_url = "https://raw.githubusercontent.com/Giri-15/digital_library/main/background.jpg"
-
-        st.markdown(
-            f"""
-            <style>
-            .stApp {{
-                background: url("{bg_image_url}") no-repeat center center fixed;
-                background-size: cover;
-                filter: opacity(0.7); /* Set background image opacity to 70% */
-            }}
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-    except Exception as e:
-        st.warning(f"⚠️ Error setting background: {e}")
 
 def custom_sidebar():
     """Custom sidebar navigation for all users."""
@@ -47,7 +26,7 @@ def main():
     st.set_page_config(page_title="Digital Library", layout="wide", initial_sidebar_state="collapsed")
 
     load_css()
-    set_background()
+    set_background("https://raw.githubusercontent.com/Giri-15/digital_library/main/background.jpg", opacity=0.7)
 
     if "authenticated" not in st.session_state:
         st.session_state["authenticated"] = False

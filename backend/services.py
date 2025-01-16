@@ -5,8 +5,6 @@ from PIL import Image
 import os
 import io
 
-IMAGE_FOLDER = "C:/Users/Giridharana/STREAMLIT_LIBRARY/Book covers"
-PLACEHOLDER_IMAGE = "C:/Users/Giridharana/streamlit/placeholder.jpg" 
 
 
 def get_books():
@@ -93,9 +91,3 @@ def validate_book_data(book_data):
     required_fields = ["title", "author", "description", "genre", "pages", "pdf_url", "audio_url", "video_url", "amazon_url", "image_data"]
     return all(field in book_data and book_data[field] for field in required_fields)
 
-def get_image_path(book_title):
-    """Find the matching image file for the given book title."""
-    for file in os.listdir(IMAGE_FOLDER):
-        if book_title.lower() in file.lower():
-            return os.path.join(IMAGE_FOLDER, file)
-    return PLACEHOLDER_IMAGE 

@@ -10,4 +10,4 @@ env/
 *.venv
 
 # Ignore environment variables file
-.env.env
+.env

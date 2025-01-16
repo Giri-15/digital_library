@@ -61,14 +61,14 @@ def book_viewer():
                 )
 
             st.markdown(f"""
-        <div style="position: relative; height: 100%; display: flex; flex-direction: column; align-items: flex-end; top: 0;">
-            <a href="{book_amazon_url}" target="_blank">
-                <button style="background-color: darkblue; color: white; padding: 8px 10px; border: none; cursor: pointer; position: absolute; top: -60px; right: 0px; font-size: 14px;">
-                    🛒 Buy on Amazon
-                </button>
-            </a>
-        </div>
-        """, unsafe_allow_html=True)
+                <div class="amazon-button-container">
+                    <a href="{book_amazon_url}" target="_blank">
+                        <button class="amazon-button">🛒 Buy on Amazon</button>
+                    </a>
+                </div>
+            """, unsafe_allow_html=True)
+
+        
 
             st.session_state["active_tab"] = tab_choice
 
