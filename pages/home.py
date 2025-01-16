@@ -1,4 +1,3 @@
-import os
 import streamlit as st
 from PIL import Image as PILImage
 from backend.services import get_books
