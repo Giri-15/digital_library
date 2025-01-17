@@ -3,6 +3,8 @@ from PIL import Image as PILImage
 from backend.services import get_books
 from frontend_app.load_styles import load_css
 
+
+
 def home():
     """Render the Home Page with uniformly sized book images."""
     load_css()
